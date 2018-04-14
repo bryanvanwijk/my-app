@@ -22,8 +22,8 @@ class App extends React.Component<{}, IState> {
 
   public async loadData() {
     const res = await fetch("/api/test");
-    const data  = await res.json();
-    this.setState({ data })
+    const json  = await res.json();
+    this.setState({ data: json.data })
   }
 
   public render() {
