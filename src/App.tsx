@@ -9,6 +9,13 @@ interface IState {
 
 class App extends React.Component<{}, IState> {
 
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+        data: ""
+    };
+}
+
   public componentDidMount() {
     this.loadData();
   }
